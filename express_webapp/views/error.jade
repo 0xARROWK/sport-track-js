@@ -1,0 +1,23 @@
+doctype html
+html(lang='fr')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Erreur
+        // CSS THEME
+        link(rel='stylesheet' href='resources/css/vendor.bundle.base.css')
+        link(rel='stylesheet' href='resources/css/style.css')
+    body#body
+        .container-scroller
+            .container-fluid.page-body-wrapper.full-page-wrapper
+                .content-wrapper.d-flex.align-items-center.theme-one
+                    .row.w-100.mx-auto
+                        .col-lg-8.col-xl-6.mx-auto
+                            .auto-form-wrapper
+                                .row.mt-5
+                                    .col-12.d-flex.text-center.justify-content-center
+                                        span(style='color: red;')
+                                            | #{err ? err : "Ceci est une page d'erreur, veuillez retourner à l'accueil."}
+                                .row
+                                    .col-12.mt-5.d-flex.justify-content-center
+                                            a.btn.btn-primary(href=ret ? ret : '/' style='text-decoration: none; color: white;') Retour
